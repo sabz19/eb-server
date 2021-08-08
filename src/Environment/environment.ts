@@ -1,4 +1,4 @@
 export const environment = {
-    base: 'https://eb-automation.herokuapp.com',
+    eventbriteBase: 'https://www.eventbriteapi.com',
     eventSeriesId : "117176613405"
 }
