@@ -1,7 +1,7 @@
 import axios from "axios";
 import { URL } from "url";
 
-async function token() {
+function token() {
   return process.env.token;
 }
 
@@ -15,13 +15,15 @@ export async function request(url: URL, type: string): Promise<Object> {
       },
     };
   }
+  
   axios
     .get(url.toString(), config)
     .then((response) => {
+      console.error(response.data);
       return response.data;
     })
     .catch((error) => {
-      console.error(error);
+      console.error('error = ',error);
     });
 
   return {};
